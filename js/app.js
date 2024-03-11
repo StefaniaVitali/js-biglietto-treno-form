@@ -26,17 +26,21 @@ buttonElement.addEventListener('click', function(){
 
 //calcolare il prezzo base
 const basePrice = km * price
+let discount = 0
 
 //calcolare lo sconto
-if (age < 18){
+if (userAge < 18){
      discount = 0.2 //20:100
-} else if{
+} else if (userAge > 65){
      discount = 0.4 // 40:100
 }else {
      discount = 0
 };
 
-//prezzo finale
 
+
+//prezzo finale
+const finalPrice = basePrice - discount;
+console.log(finalPrice);
 
 //stampare il prezzo finale
