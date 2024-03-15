@@ -1,53 +1,75 @@
 console.log('Siamo collegati!');
 
-//versione semplice dell'esercizio
+//VERSIONE BASE DELL'ESERCIZIO
 
-//Ottenere il numero di km da percorrere da input
-  //1) recuperare i km dall'imput
- const kmInputElement = document.getElementById('km'); //Object
- console.log(kmInputElement);
-  //2) collegare il campo dove verrà inserito il valore dall'utente 
-    /*2b trasformarlo in numero tramite parsFloat perchè potrebbe 
-    non essere un numero intero */
- const kmValue = parseFloat(kmInputElement.value); //number
- console.log(kmValue , typeof kmValue);
+//1)Ottenere collegare i vari input al file js
 
-// //chiedere l'età
-//   //1) collegare l'input dell'html dove si indicano i km
-const ageInputElement = document.getElementById('age'); //object
-console.log(ageInputElement); 
-//   //2) collegare il campo dove verrà inserito il valore dall'utente
-        /*2b trasformarlo in numero tramite parsFloat perchè potrebbe 
-    non essere un numero intero */
-const ageValue = parseFloat(ageInputElement.value); //number
-console.log(ageValue);
-//   // collegare il bottone
-const buttonInputElement = document.getElementById('submit');
-console.log(buttonInputElement);
+  //1a) recuperare i km dall'imput
+  const kmInputElement = document.getElementById('km'); //object | null
+  console.log(kmInputElement);
 
-// //ascoltare l'evento click
-buttonInputElement.addEventListener('click', function(){
-console.log('ciao')
-});
+  //1b) recuperare l'età dall'input
+  const ageInputElement = document.getElementById('age'); //object | null
+  console.log(ageInputElement);
 
-//  
+  //1c) collegare il bottone
+  const buttonElement = document.getElementById('submit'); //object |null
+  console.log(buttonElement, typeof buttonElement);
+  //1d) collegare il div su cui stampare il risultato
+  const priceElement = document.getElementById('prezzo');
+  console.log(priceElement)
 
+   //prendere i valori degli input per collegare il bottone
+   // const km = kmInputElement.value
+   // console.log(km);
+   // const age = ageInputElement.value
+   // console.log(age);
 
-//calcolare il costo del biglietto :
-   //-calcolare il prezzo base
+  //1c-b) testare il bottone + inserire i valori che dobbiamo recuperare al click
+  buttonElement.addEventListener ('click', function(){ 
+      //testare bottone
+       console.log('dai che ce la facciamo!')
+      //valori input
+       const km = parseFloat(kmInputElement.value) //number 
+       console.log(km);
+       const age = parseFloat(ageInputElement.value) //number
+      console.log(age);
+      //calcolare il prezzo del biglietto:
    
-   //-calcolare lo sconto
-// if (userAge < 18){
-//      discount = 0.2 //20:100
-// } else if (userAge > 65){
-//      discount = 0.4 // 40:100
-// }else {
-//      discount = 0
-// };
+       //a) costante costo per km
+       const tariffa = 0.21 //number
+       //b) calcolare il prezzo base
+       const basePrice = (km * 0.21) //number
+       console.log(basePrice);
+       //c) calcolare lo sconto
+       let discount = 0
+         if(age < 18){
+         discount = 0.2
+         }else if (age > 65){
+         discount = 0.4
+         }
+      // console.log (discount)
+      
+       //d) restituire il prezzo finale del biglietto in base allo sconto
+      const finalPrice = (basePrice - basePrice * discount);
+      console.log(finalPrice)
+      
+       //e) stampare il prezzo nell'html
+       priceElement.innerHTML = finalPrice.toFixed(2) + '&euro;'
+      
+      
+
+  });
+
+
+  
 
 
 
-//prezzo finale
 
 
-//stampare il prezzo finale
+
+  
+  
+
+//considerazioni correzione esercizio
