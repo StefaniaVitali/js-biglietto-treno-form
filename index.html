@@ -10,28 +10,37 @@
     <header></header>
     <main>
      <section>
-       <div class="container">
+      <div class="container">
         <h1 class="text-center">Js biglietto treno</h1>
         <h2 class="text-center">Quanto costa il mio biglietto?</h2>
-       </div>
-       <div class="container">
-         <div class="mb-3">
-            <label for="Km" class="form-label">Quanti km devi percorrere?</label>
-            <input type="text" 
-                   class="form-control" 
-                   id="km" 
-                   name="km"
-                   placeholder="42">
+        <div class="row justify-content-evenly">
+          <div class="col-md-4 border border-2 rounded g-3">
+            <div class="mb-3">
+              <label for="km" class="form-label fw-bold">Km da percorrere</label>
+              <input 
+                  type="text" 
+                  class="form-control" 
+                  id="km" 
+                  name="km"
+                  placeholder="50 km">
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="Km" class="form-label">Quanti anni hai?</label>
-            <input type="text" 
-                   class="form-control" 
-                   id="user-age" 
-                   placeholder="20"> 
+          <div class="col-md-4 border border-2 rounded g-3">
+            <div class="mb-3">
+              <label for="age" class="form-label fw-bold">Quanti anni hai?</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="age" 
+                name="age"
+                placeholder="30 anni">
+            </div>    
           </div>
-          <button id="submit" class="submit btn btn-primary">Invio</button>
-       </div>
+         
+            <button id="submit" type="submit" class="btn btn-primary mt-5">Invio</button>
+          
+        </div>
+      </div>
      </section>     
     </main>
     <footer></footer>

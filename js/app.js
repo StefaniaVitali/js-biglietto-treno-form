@@ -2,45 +2,52 @@ console.log('Siamo collegati!');
 
 //versione semplice dell'esercizio
 
+//Ottenere il numero di km da percorrere da input
+  //1) recuperare i km dall'imput
+ const kmInputElement = document.getElementById('km'); //Object
+ console.log(kmInputElement);
+  //2) collegare il campo dove verrà inserito il valore dall'utente 
+    /*2b trasformarlo in numero tramite parsFloat perchè potrebbe 
+    non essere un numero intero */
+ const kmValue = parseFloat(kmInputElement.value); //number
+ console.log(kmValue , typeof kmValue);
 
-//inserimento costanti da richiamare 
-const kmDistanza = document.getElementById('km'); //object
-const userAge = document.getElementById('user-age');
-const buttonElement = document.getElementById('submit');
-const price = 0.21 
+// //chiedere l'età
+//   //1) collegare l'input dell'html dove si indicano i km
+const ageInputElement = document.getElementById('age'); //object
+console.log(ageInputElement); 
+//   //2) collegare il campo dove verrà inserito il valore dall'utente
+        /*2b trasformarlo in numero tramite parsFloat perchè potrebbe 
+    non essere un numero intero */
+const ageValue = parseFloat(ageInputElement.value); //number
+console.log(ageValue);
+//   // collegare il bottone
+const buttonInputElement = document.getElementById('submit');
+console.log(buttonInputElement);
 
-
-//Ottenere il numero di km da percorrere
-  // const km = kmDistanza.value
-//chiedere l'età
-  // const age = userAge.value
-
-
-//agganciare l'evento al pulsante
-buttonElement.addEventListener('click', function(){
-    console.log('invio')
-    const km = kmDistanza.value
-    const age = userAge.value
-    console.log(km,age)
+// //ascoltare l'evento click
+buttonInputElement.addEventListener('click', function(){
+console.log('ciao')
 });
 
-//calcolare il prezzo base
-const basePrice = km * price
-let discount = 0
+//  
 
-//calcolare lo sconto
-if (userAge < 18){
-     discount = 0.2 //20:100
-} else if (userAge > 65){
-     discount = 0.4 // 40:100
-}else {
-     discount = 0
-};
+
+//calcolare il costo del biglietto :
+   //-calcolare il prezzo base
+   
+   //-calcolare lo sconto
+// if (userAge < 18){
+//      discount = 0.2 //20:100
+// } else if (userAge > 65){
+//      discount = 0.4 // 40:100
+// }else {
+//      discount = 0
+// };
 
 
 
 //prezzo finale
-const finalPrice = basePrice - discount;
-console.log(finalPrice);
+
 
 //stampare il prezzo finale
