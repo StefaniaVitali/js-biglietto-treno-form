@@ -9,7 +9,7 @@
   <body>
     <header></header>
     <main>
-     <section>
+     <section class="exercise1 mb-5 border">
       <div class="container">
         <h1 class="text-center">Js biglietto treno</h1>
         <h2 class="text-center">Quanto costa il mio biglietto?</h2>
@@ -47,7 +47,46 @@
           <div id="prezzo" class="text-center">il risultato</div>
         </div>
       </div>
-     </section>     
+     </section> 
+     <section class="exercise2">
+      <div class="container">
+        <h2 class="text-center">Quanto costa il mio biglietto - BONUS!</h2>
+        <form action="">
+          <div class="row justify-content-evenly">
+            <div class="col-md-4 border border-2 rounded g-3">
+              <div class="mb-3">
+                <label for="km2" class="form-label fw-bold">Km da percorrere</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="km2" 
+                    name="km"
+                    placeholder="50 km">
+              </div>
+            </div>
+            <div class="col-md-4 border border-2 rounded g-3">
+              <div class="mb-3">
+                <label for="age2" class="form-label fw-bold">Quanti anni hai?</label>
+                <select id="age2" class="form-select" aria-label="Default select example">
+                  <option value =0 selected>Nessuno sconto</option>
+                  <option value="1">da 0 a 17 anni</option>
+                  <option value="2">da 66 anni in sù</option>
+                </select>
+              </div>    
+            </div>
+           
+              <button id="submit2" type="submit" class="btn btn-primary mt-5">Invio</button>
+            
+          </div>
+        </div>
+        <div class="container border border-2 rounded mt-5">
+          <h2 class="text-center">Risultato</h2>
+          <div class="row justify-content-center">
+            <div id="prezzo2" class="text-center">il risultato</div>
+          </div>
+        </form>
+      </div>
+     </section>    
     </main>
     <footer></footer>
    

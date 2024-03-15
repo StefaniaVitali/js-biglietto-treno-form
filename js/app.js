@@ -4,7 +4,7 @@ console.log('Siamo collegati!');
 
 //1)Ottenere collegare i vari input al file js
 
-  //1a) recuperare i km dall'imput
+  //1a) recuperare i km dall'input
   const kmInputElement = document.getElementById('km'); //object | null
   console.log(kmInputElement);
 
@@ -61,9 +61,28 @@ console.log('Siamo collegati!');
 
   });
 
+  //VERSIONE BONUS:
+// Sostituite l’input dell’età con una select che permetta all’utente di selezionare una opzione per lo sconto scegliendo tra: nessuno, minorenni, over 65 (per questo dovrete modificare un po le condizioni degli if / else if per calcolare lo sconto)
+// Stampate il risultato in maniera più carina. Stampate una card che al suo interno abbia una piccola tabella che contenga un riepilogo del biglietto: km del viaggio, prezzo base, sconto applicato, prezzo totale (prezzi stampati con 2 cifre decimali)
+// inserite gli input e il button dentro un tag form e invece di ascoltare il click sul button, ascoltate l’evento submit del form impedendo che questo venga inviato e che si ricarichi il browser.
 
-  
+//collegare i vari input all'js
 
+//1a recuperare i km dall'input
+const kmInputElement2 = document.getElementById('km2'); //object | null
+console.log(kmInputElement2);
+
+//1b) recuperare l'età dall'input
+const ageInputElement2 = document.getElementById('age2'); //object | null
+console.log(ageInputElement2);
+
+//1c)
+const buttonElement2 = document.getElementById('submit2'); //object |null
+  console.log(buttonElement, typeof buttonElement);
+
+//1d) collegare il div su cui stampare il risultato
+  const priceElement2 = document.getElementById('prezzo2');
+  console.log(priceElement2)
 
 
 
