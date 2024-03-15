@@ -86,11 +86,32 @@ const buttonElement2 = document.getElementById('submit2'); //object |null
 
 //2 testare il bottone
 buttonElement2.addEventListener('click', function(){
-console.log("mai perdersi d'animo!");
-})
+//buttonElement2 test
+  console.log("mai perdersi d'animo!")
+//ottenere i valori di  km2 e age2
+//km2
+const km2 = parseFloat(kmInputElement2.value) //number
+console.log(km2)
+//age2
+const age2 = parseFloat(ageInputElement2.value) //number
+console.log(age2)
+
+//validare i dati dentro il primo if
+if(){
+
+} else {
+  
+}
+//   
+
+});
 
 
 
+
+
+//validare i dati
+// non dobbiamo avere un Nan: !
 
 
   
