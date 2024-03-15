@@ -81,8 +81,13 @@ const buttonElement2 = document.getElementById('submit2'); //object |null
   console.log(buttonElement, typeof buttonElement);
 
 //1d) collegare il div su cui stampare il risultato
-  const priceElement2 = document.getElementById('prezzo2');
+  const priceElement2 = document.getElementById('prezzo2');//object
   console.log(priceElement2)
+
+//2 testare il bottone
+buttonElement2.addEventListener('click', function(){
+console.log("mai perdersi d'animo!");
+})
 
 
 
