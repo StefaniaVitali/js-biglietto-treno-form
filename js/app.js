@@ -83,11 +83,22 @@ const buttonElement2 = document.getElementById('submit2'); //object |null
 //1d) collegare il div su cui stampare il risultato
   const priceElement2 = document.getElementById('prezzo2');//object
   console.log(priceElement2)
+ 
+ //1e collegare il tag form
+ const formElement = document.getElementById('ticket-calculator');
+ console.log(formElement) 
+
+
+
 
 //2 testare il bottone
 buttonElement2.addEventListener('click', function(){
 //buttonElement2 test
   console.log("mai perdersi d'animo!")
+//evitare che la pagina si ricarichi 
+formElement.addEventListener('click', function(event){
+  event.preventDefault()
+} )
 //ottenere i valori di  km2 e age2
 //km2
 const km2 = parseFloat(kmInputElement2.value) //number
