@@ -95,10 +95,6 @@ const buttonElement2 = document.getElementById('submit2'); //object |null
 buttonElement2.addEventListener('click', function(){
 //buttonElement2 test
   console.log("mai perdersi d'animo!")
-//evitare che la pagina si ricarichi 
-// formElement.addEventListener('click', function(event){
-//   event.preventDefault()
-// } )
 // //ottenere i valori di  km2 e age2
 // //km2
 const km2 = parseFloat(kmInputElement2.value) //number
@@ -107,30 +103,14 @@ console.log(km2)
 const age2 = parseInt(ageInputElement2.value) //number
 console.log(age2)
 
-// //calcolare il prezzo del biglietto:
-// const basePrice2 = (km2 * 0.21) //number
-// console.log(basePrice2)
-// //calcolare lo sconto
-// let discount2 = 0
-// if(ageInputElement2.value === "1"){
-//   discount2 = 0.2
-//   }else if (ageInputElement2.value === "2"){
-//   discount2 = 0.4
-//   }
-// //  console.log(discount2) 
-// //calcola il prezzo definitivo
-// const finalPrice2 = (basePrice2 - basePrice2 * discount2);
-// console.log(finalPrice2)
+//validare i dati dentro il primo if:
 
-// //stampare prezzo nell'html
-// priceElement2.innerHTML = finalPrice2.toFixed(2)
-//validare i dati dentro il primo if
-
+// / SE km2 > 0 | km2 non Nan allora stamperemo il prezzo
 if(
   km2>0 && 
   !isNaN(km2) 
   ){
-// SE km2 > 0 | age2 >= 0 | km2 non Nan | age2 non Nan = stamperemo il prezzo
+//evitare che la pagina si ricarichi 
 formElement.addEventListener('click', function(event){
   event.preventDefault()
 } )
@@ -145,19 +125,43 @@ if(ageInputElement2.value === "1"){
   }else if (ageInputElement2.value === "2"){
   discount2 = 0.4
   }
+
+ const discount2Value =  (basePrice2 * discount2)
+ console.log(discount2Value)
 //  console.log(discount2) 
 //calcola il prezzo definitivo
 const finalPrice2 = (basePrice2 - basePrice2 * discount2);
 console.log(finalPrice2)
 
+
+
 //stampare prezzo nell'html
-priceElement2.innerHTML = finalPrice2.toFixed(2)
+priceElement2.innerHTML = `<table class="table">
+                              <thead>
+                                <tr>
+                                    <th>KM</th>
+                                    <th>% sconto</th>
+                                    <th>costo finale</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <tr>
+                                    <td>${ km2 }</td>
+                                    <td>${ discount2Value.toFixed(2) }</td>
+                                    <td>${ finalPrice2.toFixed(2) }</td>
+                                </tr>
+                             </tbody>
+                              <tfoot></tfoot>
+                           </table> `
 
   
 
 } else {
 //ALTRIMENTI diremo che non è possibile fare il calcolo
-alert('i dati inseriti non sono corretti!')
+//test per vedere se la condizionale if funziona
+// alert('i dati inseriti non sono corretti!')
+priceElement2.innerHTML = "I dati inseriti non sono corretti"
+
 
 }
  
@@ -167,9 +171,6 @@ alert('i dati inseriti non sono corretti!')
 
 
 
-
-//validare i dati
-// non dobbiamo avere un Nan: !
 
 
   
