@@ -96,16 +96,44 @@ buttonElement2.addEventListener('click', function(){
 //buttonElement2 test
   console.log("mai perdersi d'animo!")
 //evitare che la pagina si ricarichi 
-formElement.addEventListener('click', function(event){
-  event.preventDefault()
-} )
-//ottenere i valori di  km2 e age2
-//km2
+// formElement.addEventListener('click', function(event){
+//   event.preventDefault()
+// } )
+// //ottenere i valori di  km2 e age2
+// //km2
 const km2 = parseFloat(kmInputElement2.value) //number
 console.log(km2)
 //age2
 const age2 = parseInt(ageInputElement2.value) //number
 console.log(age2)
+
+// //calcolare il prezzo del biglietto:
+// const basePrice2 = (km2 * 0.21) //number
+// console.log(basePrice2)
+// //calcolare lo sconto
+// let discount2 = 0
+// if(ageInputElement2.value === "1"){
+//   discount2 = 0.2
+//   }else if (ageInputElement2.value === "2"){
+//   discount2 = 0.4
+//   }
+// //  console.log(discount2) 
+// //calcola il prezzo definitivo
+// const finalPrice2 = (basePrice2 - basePrice2 * discount2);
+// console.log(finalPrice2)
+
+// //stampare prezzo nell'html
+// priceElement2.innerHTML = finalPrice2.toFixed(2)
+//validare i dati dentro il primo if
+
+if(
+  km2>0 && 
+  !isNaN(km2) 
+  ){
+// SE km2 > 0 | age2 >= 0 | km2 non Nan | age2 non Nan = stamperemo il prezzo
+formElement.addEventListener('click', function(event){
+  event.preventDefault()
+} )
 
 //calcolare il prezzo del biglietto:
 const basePrice2 = (km2 * 0.21) //number
@@ -124,16 +152,6 @@ console.log(finalPrice2)
 
 //stampare prezzo nell'html
 priceElement2.innerHTML = finalPrice2.toFixed(2)
-//validare i dati dentro il primo if
-
-if(
-  km2>=0 && 
-  age2>=0 && 
-  !isNaN(km2) && 
-  !isNaN(age2)
-  ){
-// SE km2 > 0 | age2 >= 0 | km2 non Nan | age2 non Nan = stamperemo il prezzo
-
 
   
 
@@ -142,7 +160,7 @@ if(
 alert('i dati inseriti non sono corretti!')
 
 }
-//   
+ 
 
 });
 
